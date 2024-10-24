@@ -39,24 +39,45 @@ nav ul li a {
 }
 
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    position: relative;  /* Para permitir o posicionamento absoluto do pseudo-elemento */
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    overflow: hidden;    /* Esconde o overflow do pseudo-elemento */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;  /* Posiciona o pseudo-elemento */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('fundo.png') no-repeat center center/cover; /* Imagem de fundo */
+    background-size: cover;
+    filter: blur(8px);   /* Aplica o efeito de desfoque */
+    z-index: 1;          /* Coloca atrás do conteúdo */
+}
+
+.hero h2,
+.hero p,
+.cta {
+    position: relative;   /* Permite que o texto fique acima do pseudo-elemento */
+    z-index: 2;          /* Garante que o texto esteja acima do desfoque */
 }
 
 .hero h2 {
     font-size: 3rem;
-    color: #333;
+    color: #333;         /* Alterado para branco para melhor contraste */
 }
 
 .hero p {
     font-size: 1.2rem;
     margin: 20px 0;
-    color: #333;
+    color: #333;         /* Alterado para branco para melhor contraste */
 }
 
 .cta {
