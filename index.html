@@ -6,26 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Start Máquinas</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>Start Máquinas</h1>
-        </div>
+            <a href="index.html">
+                <img src="logo.png" alt="Start Máquinas Logo" draggable="false" />
+            </a>
+        </div>        
         <nav>
-            <ul>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+            <div class="nav-container">
+                <select class="nav-select" onchange="location = this.value;">
+                    <option value="#sobre">Sobre Nós</option>
+                    <option value="#produtos">Produtos</option>
+                    <option value="#contato">Contato</option>
+                </select>
+                <ul class="nav-links">
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
         </nav>
+        
     </header>
-
+    
     <section class="hero">
         <div class="hero-content">
             <h2>Soluções em Máquinas para Todos os Públicos</h2>
             <p>Qualidade e eficiência em cada detalhe.</p>
             <a href="#produtos" class="cta">Veja nossos produtos</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre Nós</h2>
+        <div class="sobre-content">
+            <p>
+                Lorem ipsum dolor sit amet. Qui minus consequatur qui nobis nihil sed ratione sunt ut cupiditate aliquam ut accusantium reprehenderit! Aut sunt laudantium eos omnis corrupti in earum dolor ea rerum quia et maxime omnis et recusandae placeat
+            </p>
+
+            <br>
+
+            <p>
+                Et optio nesciunt ut autem assumenda in exercitationem dolorum rem inventore optio in quia necessitatibus eos fugiat suscipit. Nam reiciendis beatae est maiores rerum in dolores culpa ut tempore laudantium in magnam distinctio? Sed voluptas facilis est molestiae aspernatur est consequatur sequi cum dolorum rerum qui quia consectetur aut expedita rerum id laboriosam sint. Et recusandae dolorem eum voluptas cupiditate est voluptas deleniti ut similique quia ut inventore quos qui nihil possimus.
+            </p>
+            <img src="mapa.png" alt="Mapa" class="sobre-imagem">
         </div>
     </section>
 
@@ -50,30 +77,34 @@
         </div>
     </section>
 
-    <!-- <section id="sobre" class="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Start Máquinas é líder no mercado, oferecendo soluções inovadoras para diversos setores. Nossa missão é proporcionar máquinas de alta qualidade para empresas de todos os tamanhos.</p>
-    </section>
-
     <section id="contato" class="contato">
         <h2>Contato</h2>
-        <form>
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" required>
+        <div class="contato-container">
+            <!-- <form>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </section> -->
+                <button type="submit">Enviar</button>
+            </form> -->
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 Start Máquinas. Todos os direitos reservados.</p>
     </footer>
+
+    <button id="back-to-top" onclick="scrollToTop()">&#8679;</button>
 
     <script src="scripts.js"></script>
 </body>
